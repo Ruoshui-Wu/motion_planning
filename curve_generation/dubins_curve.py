@@ -307,7 +307,7 @@ class Dubins(Curve):
 			cost = (abs(t) + abs(p) + abs(q))
 			if best_cost > cost:
 				best_t, best_p, best_q, best_mode, best_cost = t, p, q, mode, cost
-		
+	
 		# interpolation
 		segments = [best_t, best_p, best_q]
 		points_num = int(sum(segments) / self.step) + len(segments) + 3

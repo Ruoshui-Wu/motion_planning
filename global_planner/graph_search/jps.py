@@ -77,6 +77,7 @@ class JPS(AStar):
                 jp = self.jump(node, motion)
                 # exists and not in CLOSED set
                 if jp and jp not in CLOSED:
+                    #print(jp.current)
                     jp.parent = node.current
                     jp.h = self.h(jp, self.goal)
                     jp_list.append(jp)

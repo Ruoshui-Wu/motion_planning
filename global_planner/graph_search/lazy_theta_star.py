@@ -68,6 +68,7 @@ class LazyThetaStar(ThetaStar):
             # set vertex: path 1
             try:
                 node_p = CLOSED[CLOSED.index(Node(node.parent))]
+                # if there isn't a line of sight exists
                 if self.lineOfSight(node_p, node):
                     node.g = float("inf")
                     for node_n in self.getNeighbor(node):

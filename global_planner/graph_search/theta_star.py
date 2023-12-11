@@ -114,7 +114,7 @@ class ThetaStar(AStar):
         node_p, node_c: Node
         '''
         if not self.lineOfSight(node_c, node_p):
-            # path 2
+            # if there exists a line of sight, use path 2
             if node_p.g + self.dist(node_c, node_p) <= node_c.g:
                 node_c.g = node_p.g + self.dist(node_c, node_p)
                 node_c.parent = node_p.current
